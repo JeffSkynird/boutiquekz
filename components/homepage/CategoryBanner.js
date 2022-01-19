@@ -7,12 +7,12 @@ class CategoryBanner extends Component {
 
   render() {
     const { categories } = this.props;
-
+    console.log(categories);
     return (
       <div className="bg-brand300 py-5 collection-banner">
         <div className="custom-container py-5">
           <p className="font-size-display2 my-3 py-5 text-center font-family-secondary">
-            Categories
+            Categorias
           </p>
 
           <div className="row">
@@ -24,11 +24,11 @@ class CategoryBanner extends Component {
                 <Link href={`/collection#${item.slug}`} key={item.id}>
                   <a className="align-items-center font-color-black flex-column cursor-pointer mb-5">
                     <div>
-                      { item.meta?.image && (
+                      { item.assets[0]?.url && (
                         <div
                           className="mb-4 w-100 collection-item-image"
                           style={{
-                            background: `url("${item.meta.image}") center center/cover`
+                            background: `url("${ item.assets[0]?.url}") center center/cover`
                           }}
                         />
                       )}

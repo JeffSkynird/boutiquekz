@@ -24,15 +24,15 @@ const transitionStyles = {
 
 const mobileMenuLinks = [
   {
-    name: 'Home',
+    name: 'Inicio',
     link: '/'
   },
   {
-    name: 'Shop',
+    name: 'Tienda',
     link: '/collection'
   },
   {
-    name: 'About',
+    name: 'Acerca de',
     link: '/about'
   }
 ];
@@ -142,12 +142,12 @@ class Header extends Component {
         <div className="d-flex align-items-center">
           { customer && customer.firstname && (
             <span className="mr-2 font-weight-regular">
-              Hi, { customer.firstname }!
+              Hola, { customer.firstname }!
             </span>
           ) }
           <Link href="/account">
             <a className="font-color-black mx-2">
-              My account
+             Mi cuenta
             </a>
           </Link>
           <button
@@ -155,7 +155,7 @@ class Header extends Component {
             type="button"
             onClick={this.handleLogout}
           >
-            Logout
+            Cerrar sesión
           </button>
         </div>
       );
@@ -164,7 +164,7 @@ class Header extends Component {
     return (
       <Link href="/login">
         <a className="font-color-black login">
-          Login
+          Iniciar sesión
         </a>
       </Link>
     );
@@ -185,10 +185,10 @@ class Header extends Component {
         >
           <div className="d-none d-sm-flex">
             <Link href="/collection">
-              <a className="mr-4 font-color-black">Shop</a>
+              <a className="mr-4 font-color-black">Tienda</a>
             </Link>
             <Link href="/about">
-              <a className="font-color-black">About</a>
+              <a className="font-color-black">Acerca de</a>
             </Link>
           </div>
           <div className="logo-container">
@@ -201,9 +201,10 @@ class Header extends Component {
             <Link href="/">
               <a>
                 <img
-                  src="/images/commerce.svg"
-                  className="logo cursor-pointer"
+                  src="/images/logo.svg"
+                 
                   alt="Logo"
+             
                 />
               </a>
             </Link>

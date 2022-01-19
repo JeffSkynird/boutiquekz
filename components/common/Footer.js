@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4">
           <p className="font-family-secondary font-size-display1 mb-4">
-            Commerce.js
+            Conócenos
           </p>
           <div className="d-flex font-color-medium mb-5 pb-3 pb-md-0 mb-md-0">
             <div className="pr-5">
@@ -16,7 +16,7 @@ const Footer = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Documentation
+                Page officielle de la boutique KZ
               </a>
               <a
                 href="https://commercejs.com/features"
@@ -24,7 +24,7 @@ const Footer = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Features
+               Produits originaux 
               </a>
             </div>
             <div>
@@ -34,35 +34,28 @@ const Footer = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                About
+               Photos réelles
               </a>
-              <a
-                href="http://slack.commercejs.com/"
-                className="d-block font-color-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Community
-              </a>
+           
             </div>
           </div>
         </div>
         <div className="col-12 col-sm-6 col-md-4">
           <p className="font-family-secondary font-size-display1 mb-4">
-            Follow us
+            Siguenos
           </p>
           <div className="d-flex font-color-medium mb-5 pb-3 pb-md-0 mb-md-0">
             <div className="pr-5">
               <a
-                href="https://twitter.com/commercejs"
+                href="https://wa.link/tvbyqv"
                 className="mb-3 d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                Whatsapp
               </a>
               <a
-                href="https://www.instagram.com/commerce.js/"
+                href="https://www.instagram.com/kz_boutique_/"
                 className="d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,32 +65,25 @@ const Footer = () => (
             </div>
             <div>
               <a
-                href="https://angel.co/company/chec"
+                href="https://www.facebook.com/groups/428899688802967"
                 className="mb-3 d-block font-color-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Angel
+                Facebook
               </a>
-              <a
-                href="https://www.linkedin.com/company/chec-chec-commerce-inc.-/"
-                className="d-block font-color-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
+            
             </div>
           </div>
         </div>
         <div className="col-12 col-md-4">
           <p className="font-family-secondary font-size-display1 mb-3">
-            Newsletter
+            Novedades
           </p>
           <div className="position-relative">
             <input
               className="borderbottom border-color-gray400 h-48 w-100 px-3"
-              placeholder="email address"
+              placeholder="Correo electrónico"
             />
             <button className="bg-transparent position-absolute right-0 top-50 translateY--50 pr-2 h-48">
               <img src="/icon/arrow-long-right.svg" className="w-24" alt="Arrow icon"/>
@@ -116,26 +102,9 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Deploy to Netlify
+              BOUTIQUE KZ
             </a>
-            <p className="px-2 font-color-brand font-size-caption">-</p>
-            <a
-              href="https://github.com/chec/commercejs-nextjs-demo-store"
-              className="font-color-brand font-size-caption text-uppercase text-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Clone in GitHub
-            </a>
-            <p className="px-2 font-color-brand font-size-caption">-</p>
-            <a
-              href="https://github.com/chec/commercejs-nextjs-demo-store"
-              className="font-color-brand font-size-caption text-uppercase text-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contribute
-            </a>
+          
           </div>
           <div className="font-color-brand font-size-caption py-4 text-right">
           <a
@@ -144,7 +113,7 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              &copy; { new Date().getFullYear() } Chec/Commerce.js.
+              &copy; { new Date().getFullYear() } BOUTIQUE KZ
             </a>
           </div>
         </div>

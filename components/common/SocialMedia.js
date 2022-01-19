@@ -3,23 +3,23 @@ import Link from 'next/link';
 
 const imagesInfo = [
   {
-    image: '/images/insta/1.png',
+    image: '/images/insta1.png',
     translateRatio: -50
   },
   {
-    image: '/images/insta/2.jpg',
+    image: '/images/insta2.png',
     translateRatio: 30
   },
   {
-    image: '/images/insta/3.jpg',
+    image: '/images/insta3.png',
     translateRatio: 0
   },
   {
-    image: '/images/insta/4.jpg',
+    image: '/images/insta4.png',
     translateRatio: -20
   },
   {
-    image: '/images/insta/5.jpg',
+    image: '/images/insta5.png',
     translateRatio: -80
   }
 ];
@@ -79,12 +79,12 @@ export default class SocialMedia extends React.Component {
                 className="font-size-display1 mb-3"
                 style={{ maxWidth: '26rem' }}
               >
-                Follow us on Instagram for more updates
+                Sigues en instagram para más actualizaciones
               </p>
               <div className="d-flex">
-                <Link href="/about">
+                <Link href="https://www.instagram.com/kz_boutique_/">
                   <a className="d-flex py-3 align-items-center font-color-black borderbottom border-color-black">
-                    <p className="mr-3">Follow us</p>
+                    <p className="mr-3">Siguenos</p>
                     <img src="/icon/arrow-long-right.svg" alt="Arrow icon"/>
                   </a>
                 </Link>

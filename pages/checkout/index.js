@@ -36,18 +36,18 @@ class CheckoutPage extends Component {
 
       // string property names to conveniently identify inputs related to commerce.js validation errors
       // e.g error { param: "shipping[name]"}
-      'customer[first_name]': 'John',
-      'customer[last_name]': 'Doe',
-      'customer[email]': 'john@doe.com',
+      'customer[first_name]': '',
+      'customer[last_name]': '',
+      'customer[email]': '',
       'customer[phone]': '',
       'customer[id]': null,
-      'shipping[name]': 'John Doe',
-      'shipping[street]': '318 Homer Street',
+      'shipping[name]': '',
+      'shipping[street]': '',
       'shipping[street_2]': '',
-      'shipping[town_city]': 'Vancouver',
-      'shipping[region]': 'BC',
-      'shipping[postal_zip_code]': 'V6B 2V2',
-      'shipping[country]': 'CA',
+      'shipping[town_city]': '',
+      'shipping[region]': 'EC-O',
+      'shipping[postal_zip_code]': '702102',
+      'shipping[country]': 'EC',
       'billing[name]': '',
       'billing[street]': '',
       'billing[street_2]': '',
@@ -76,7 +76,7 @@ class CheckoutPage extends Component {
         'shipping[postal_zip_code]': null
       },
 
-      discountCode: 'CUSTOMCOMMERCE',
+      discountCode: '',
 
       selectedGateway: 'test_gateway',
       loading: false,
@@ -552,12 +552,12 @@ class CheckoutPage extends Component {
               <div className="d-flex pb-4 breadcrumb-container">
                 <Link href="/collection">
                   <a className="font-color-dark font-size-caption text-decoration-underline cursor-pointer">
-                    Cart
+                    Carrito
                   </a>
                 </Link>
                 <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
                 <div className="font-size-caption font-weight-bold cursor-pointer">
-                  Checkout
+                  Pasar por caja
                 </div>
               </div>
               {
@@ -565,13 +565,13 @@ class CheckoutPage extends Component {
                 && (
                   <form onChange={this.handleChangeForm} onSubmit={this.captureOrder}>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Customer
+                      Cliente
                     </p>
                     <div className="row">
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            First name*
+                            Nombres*
                           </p>
                           <input required name="customer[first_name]" autoComplete="given-name" value={this.state['customer[first_name]']} className="rounded-0 w-100" />
                         </label>
@@ -579,7 +579,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Last name*
+                            Apellidos*
                           </p>
                           <input required name="customer[last_name]" autoComplete="family-name" value={this.state['customer[last_name]']} className="rounded-0 w-100" />
                         </label>
@@ -589,7 +589,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Telephone
+                            Teléfono
                           </p>
                           <input
                             name="customer[phone]"
@@ -602,7 +602,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Email address*
+                            Correo electrónico
                           </p>
                           <input
                             required
@@ -615,7 +615,7 @@ class CheckoutPage extends Component {
                       </div>
                     </div>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Shipping Address
+                    Dirección de envío
                     </p>
                     <div className="mb-5">
                       <AddressForm
@@ -633,7 +633,7 @@ class CheckoutPage extends Component {
                         <div className="col-12 mb-3">
                           <label className="w-100">
                             <p className="mb-1 font-size-caption font-color-light">
-                              Shipping method*
+                              Dirección de envío*
                             </p>
                             <Dropdown
                               name="fulfillment[shipping_method]"
@@ -642,7 +642,7 @@ class CheckoutPage extends Component {
                                 ? (`${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_code}`)
                                 : ''
                               }
-                              placeholder="Select a shipping method"
+                              placeholder="Elige un método de envío"
                             >
                               {
                                 shippingOptions && shippingOptions.map(option => (
@@ -665,14 +665,13 @@ class CheckoutPage extends Component {
                           className="mr-3"
                         />
                         <p>
-                          Receive our news, restocking, good plans and news in your mailbox!
-                          Rest assured, you will not be flooded, we only send one newsletter
-                          per month approximately 🙂
+                        ¡Recibe nuestras novedades, reposiciones, buenos planes y novedades en tu buzón! Tenga la seguridad de que no se verá inundado, solo enviamos un boletín por mes aproximadamente 🙂!
+
                         </p>
                       </div>
                       <label className="w-100 mb-3">
                         <p className="mb-1 font-size-caption font-color-light">
-                          Order notes (optional)
+                          Observación (opcional)
                         </p>
                         <textarea name="orderNotes" value={this.state.orderNotes} className="rounded-0 w-100" />
                       </label>
@@ -718,14 +717,14 @@ class CheckoutPage extends Component {
                     </>}
 
                     <p className="checkout-error">
-                      { !selectedShippingOption ? 'Select a shipping option!' : '' }
+                      { !selectedShippingOption ? 'Elige opciones de envío!' : '' }
                     </p>
                     <button
                       type="submit"
                       className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                       disabled={!selectedShippingOption}
                     >
-                      Make payment
+                      Confirmar compra
                     </button>
                   </form>
                 )
@@ -735,7 +734,7 @@ class CheckoutPage extends Component {
             <div className="col-12 col-lg-5 col-md-10 offset-md-1 mt-4 mt-lg-0">
               <div className="bg-brand200 p-lg-5 p-3 checkout-summary">
                 <div className="borderbottom font-size-subheader border-color-gray400 pb-2 font-weight-medium">
-                  Your order
+                  Tu orden
                 </div>
                 <div className="pt-3 borderbottom border-color-gray400">
                   {(checkout.live ? checkout.live.line_items : []).map((item, index, items) => {
@@ -752,7 +751,7 @@ class CheckoutPage extends Component {
                             <p className="font-weight-medium">
                               {item.product_name}
                             </p>
-                            <p className="font-color-light">Quantity: {item.quantity}</p>
+                            <p className="font-color-light">Cantidad: {item.quantity}</p>
                             <div className="d-flex justify-content-between mb-2">
                               {item.selected_options.map((option) =>
                                 <p key={option.group_id} className="font-color-light font-weight-small">
@@ -774,7 +773,7 @@ class CheckoutPage extends Component {
                     name="discountCode"
                     onChange={this.handleChangeForm}
                     value={this.state.discountCode}
-                    placeholder="Gift card or discount code"
+                    placeholder="Tarjeta de regalo o código de descuento"
                     className="mr-2 col"
                   />
                   <button
@@ -782,7 +781,7 @@ class CheckoutPage extends Component {
                     disabled={!this.props.checkout || undefined}
                     onClick={this.handleDiscountChange}
                   >
-                    Apply
+                    APLICAR
                   </button>
                 </div>
                 <div className="py-3 borderbottom border-color-black">
@@ -792,16 +791,16 @@ class CheckoutPage extends Component {
                       amount: checkout.live ? checkout.live.subtotal.formatted_with_symbol : '',
                     },
                     {
-                      name: 'Tax',
+                      name: 'Impuesto (12%)',
                       amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
                     },
                     {
-                      name: 'Shipping',
-                      amount: selectedShippingOption ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}` : 'No shipping method selected',
+                      name: 'Envío',
+                      amount: selectedShippingOption ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}` : 'Método de envío no elegido',
                     },
                     {
-                      name: 'Discount',
-                      amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'No discount code applied',
+                      name: 'Descuento',
+                      amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'Código de descuento no aplicado',
                     }
                   ].map((item, i) => (
                     <div key={i} className="d-flex justify-content-between align-items-center mb-2">

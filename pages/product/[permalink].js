@@ -17,7 +17,8 @@ import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
 
 const detailView = `<p>
-  Slightly textured fabric with tonal geometric design and a bit of shine
+Tejido ligeramente texturizado con diseño geométrico tonal y un poco de brillo.
+
 </p>`;
 
 export default function Product() {
@@ -102,13 +103,12 @@ export default function Product() {
             onClick={toggleShipping}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Shipping and returns
+            Envío y devolución
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
-              Arrives in 5 to 7 days, returns accepted within 30
-              days. For more information, click here.
+            Llega en 5 a 7 días, se aceptan devoluciones dentro de los 30 días. Para obtener más información, haga clic aquí.
             </div>
           </Collapse>
           <div className="h-1 border-bottom border-color-black" />
@@ -116,7 +116,7 @@ export default function Product() {
             onClick={toggleDetails}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Details
+            Detalles
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showDetails}>
@@ -132,7 +132,7 @@ export default function Product() {
       </div>
     </div>
 
-    <ClientReview />
+  {/*   <ClientReview /> */}
     <SuggestedProducts />
     <ExploreBanner />
     <SocialMedia />
