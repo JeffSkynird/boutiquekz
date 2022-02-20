@@ -56,7 +56,7 @@ class CustomerAccountPage extends Component {
       return null;
     }
     return (
-      <small><strong>Customer since:</strong> { this.formatDate(this.props.customer.created) }</small>
+      <small><strong>Cliente desde:</strong> { this.formatDate(this.props.customer.created) }</small>
     );
   }
 
@@ -186,11 +186,10 @@ class CustomerAccountPage extends Component {
       <table className="table table-bordered">
       <thead>
         <tr>
-          <th>Order</th>
-          <th>Payment</th>
-          <th>Fulfillment</th>
+          <th>Orden</th>
+          <th>Estado</th>
           <th>Total</th>
-          <th>Actions</th>
+          <th>Acción</th>
         </tr>
       </thead>
       <tbody>
@@ -208,13 +207,10 @@ class CustomerAccountPage extends Component {
               <td>
                 { this.getPaymentStatus(order.status_payment) }
               </td>
-              <td>
-                { this.getFulfillmentStatus(order.status_fulfillment) }
-              </td>
               <td>{ order.order_value.formatted_with_symbol }</td>
               <td>
                 <Link href={`account/${order.id}`}>
-                  <a>View order</a>
+                  <a>Ver orden</a>
                 </Link>
               </td>
             </tr>
@@ -269,14 +265,14 @@ class CustomerAccountPage extends Component {
     return (
       <Root>
         <Head>
-          <title>Account</title>
+          <title>Cuenta</title>
         </Head>
         <div className="account-container">
           <div className="custom-container py-5 my-4 my-sm-5">
             <div className="row mt-4">
               <div className="col-12">
                 <h2 className="font-size-header mb-4 pt-5 text-center">
-                  My account
+                  Mi cuenta
                 </h2>
                 { this.renderAlert() }
               </div>
@@ -284,7 +280,7 @@ class CustomerAccountPage extends Component {
             <div className="row mt-5 pt-5">
               <div className="col-12 col-md-8 col-lg-8">
                 <div className="d-flex flex-row justify-content-between">
-                  <h5>Order history</h5>
+                  <h5>Historial de ordenes</h5>
                   { this.customerSince() }
                 </div>
                 { this.renderOrdersTable() }
@@ -303,7 +299,7 @@ class CustomerAccountPage extends Component {
                     { email }
                   </a>
                   <h6>
-                    Shipping address
+                    Dirección de envío
                   </h6>
                   { this.renderShippingAddress() }
                 </div>

@@ -135,7 +135,7 @@ class LoginHandler extends Component {
       <form>
         <label className="w-100 mb-4">
           <p className="mb-1 font-size-caption font-color-light text-left">
-            Email address
+            Correo electrónico
           </p>
           <input
             name="email"
@@ -151,7 +151,7 @@ class LoginHandler extends Component {
           type="submit"
           onClick={this.loginCustomer}
         >
-          Get magic link
+          Obtener link mágico
         </button>
       </form>
     );
@@ -164,7 +164,7 @@ class LoginHandler extends Component {
       return (
         <Root>
           <Head>
-            <title>Logging in...</title>
+            <title>Iniciando sesión...</title>
           </Head>
           <LoginAnimation />
         </Root>
