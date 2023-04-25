@@ -22,9 +22,9 @@ const About = () => (
               <h5 className="font-size-subheader mb-4">Trabajo De Titulación De La Utmach Para La Carrera Ingeniería De Sistemas</h5>
               <h6 className="font-size-subheader mb-4">Desarrollo De Prototipo De E-Commerce Para Boutiques Con Soporte De Toma De Decisiones Mediante El Uso De La Metodología Swirl</h6>
               <div className="about-cjs mt-3 d-flex flex-row">
-                <a className="px-4 py-3 font-color-white about-doc" href="/" rel="noopener noreferrer">
+                <span className="px-4 py-3 font-color-white about-doc" href="/" rel="noopener noreferrer">
                   Ir a la página principal
-                </a>
+                </span>
                 
               </div>
             </div>
@@ -33,7 +33,7 @@ const About = () => (
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/images/logoutmach.png" alt="Commerce.js illustration"/>
+              {/* <img src="/images/logoutmach.png" alt="Commerce.js illustration"/> */}
             </div>
           </div>
         </div>
